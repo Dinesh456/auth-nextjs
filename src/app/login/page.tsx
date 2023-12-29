@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import toast, {Toaster} from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -25,7 +25,7 @@ export default function LoginPage() {
       router.push("/profile");
     } catch (error: any) {
       console.log("Login failed", error.message);
-      toast.error(error.message);
+      toast.error(error.response.data.error);
     } finally {
       setLoading(false);
     }
@@ -69,8 +69,16 @@ export default function LoginPage() {
       >
         Login here
       </button>
-      <Link href="/signup">Visit signup page</Link>
-      <Toaster/>
+      <Link href="/signup" className="hover:underline">
+        Visit signup page
+      </Link>
+      <p className="text-yellow-500">
+        Forget password?{" "}
+        <Link href="/forgetpass" className="text-blue-600 hover:underline">
+          Reset Here
+        </Link>
+      </p>
+      <Toaster />
     </div>
   );
 }
