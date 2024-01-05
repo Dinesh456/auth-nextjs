@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,9 +10,16 @@ export default function Home() {
             Next.js
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-400">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            luctus, nunc auctor tempor volutpat, nibh augue semper sem, sed
+            consequat sapien felis eu eros. Suspendisse potenti. Donec sit amet
+            rhoncus purus, id lacinia tellus. Sed enim eros, dictum in efficitur
+            at, fermentum eget sem. Aenean iaculis purus lectus, pretium
+            condimentum sapien viverra et. Donec pulvinar auctor nunc id
+            commodo. Sed molestie arcu ut eros rhoncus convallis. Phasellus
+            dictum est ut arcu sagittis aliquet. Nunc dignissim, quam at finibus
+            tempus, neque ligula hendrerit lorem, ut commodo dui nibh a quam.
+            Vivamus imperdiet eget erat sed semper.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
@@ -21,7 +28,6 @@ export default function Home() {
             >
               Get started
             </Link>
-           
           </div>
         </div>
       </div>
