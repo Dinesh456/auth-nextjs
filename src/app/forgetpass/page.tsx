@@ -71,12 +71,12 @@ export default function ForgetPassPage() {
 
         <p className="mt-10 text-center text-sm ">
           {"No problem? "}
-          <a
+          <Link
             href="/login"
             className="font-semibold leading-6 text-blue-600 hover:text-blue-500"
           >
             Sign in
-          </a>
+          </Link>
         </p>
       </div>
       <Toaster />

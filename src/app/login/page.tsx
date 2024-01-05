@@ -98,19 +98,19 @@ export default function LoginPage() {
 
         <p className="mt-10 text-center text-sm ">
            {"Don't have an account? "}
-          <a
+          <Link
             href="/signup"
             className="font-semibold leading-6 text-blue-600 hover:text-blue-500"
           >
             Sign up
-          </a>
+          </Link>
           {" | "}
-          <a
+          <Link
             href="/forgetpass"
             className="font-semibold leading-6 text-yellow-600 hover:text-yellow-500"
           >
             Reset Password
-          </a>
+          </Link>
         </p>
       </div>
       <Toaster />
