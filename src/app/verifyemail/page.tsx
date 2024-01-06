@@ -32,21 +32,38 @@ export default function VerifyEmailPage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className="text-4xl">Verify Email</h1>
-      <h1 className="p-2 bg-orange-500 text-black ">
-        {token ? `${token}` : "no token"}
-      </h1>
-
       {verified && (
-        <div>
-          <h2 className="text-2xl">Email Verified</h2>
-          <Link href="/login">Login</Link>
+        <div className="sm:mx-auto text-center sm:w-full sm:max-w-sm">
+          <h2 className="mt-10 text-2xl leading-9 tracking-tight">
+            {"Your email has been verified"}
+          </h2>
+          <p className="mt-1 text-center text-[7px] font-thin">
+            {token ? `${token}` : "No token"}
+          </p>
+          <p className="mt-4 text-center text-sm">
+            {"You can now sign in with your new account "}
+            <Link
+              href="/login"
+              className="font-semibold leading-6 text-blue-600 hover:text-blue-500"
+            >
+              Sign in
+            </Link>
+          </p>
         </div>
       )}
 
       {error && (
-        <div>
-          <h2 className="text-2xl bg-red-500 text-black">Error</h2>
+        <div className="sm:mx-auto text-center sm:w-full sm:max-w-sm">
+          <h2 className="mt-10 text-2xl leading-9 tracking-tight">{"Error"}</h2>
+          <p className="mt-4 text-center text-sm">
+            {"Your email address could not be verified. "}
+            <Link
+              href="/signup"
+              className="font-semibold leading-6 text-blue-600 hover:text-blue-500"
+            >
+              Go Back
+            </Link>
+          </p>
         </div>
       )}
     </div>

@@ -33,7 +33,7 @@ export default function ForgetPassPage() {
   }, [email]);
 
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight">
           {loading ? "Processing" : "Forgot your password?"}
@@ -71,12 +71,12 @@ export default function ForgetPassPage() {
 
         <p className="mt-10 text-center text-sm ">
           {"No problem? "}
-          <a
+          <Link
             href="/login"
             className="font-semibold leading-6 text-blue-600 hover:text-blue-500"
           >
             Sign in
-          </a>
+          </Link>
         </p>
       </div>
       <Toaster />
